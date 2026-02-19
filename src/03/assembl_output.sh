@@ -10,37 +10,37 @@ assembl_full_output() {
   local err="$(check_input $1 $2 $3 $4)"
 
   if [[ $err != "" ]]; then
-    echo "$err"
-  else
-    local hostname="$(add_colors $1 $2 $3 $4 "HOSTNAME=$(hostname)")"
-
-    local timezone="$(add_colors $1 $2 $3 $4 "TIMEZONE = $(check_timezone)")"
-
-    local user="$(add_colors $1 $2 $3 $4 "USER = $USER")"
-
-    local os="$(add_colors $1 $2 $3 $4 "OS = $(check_os)")"
-
-    local date="$(add_colors $1 $2 $3 $4 "DATE = $(date +"%d %B %Y %H:%M:%S")")"
-
-    local uptime="$(add_colors $1 $2 $3 $4 "UPTIME = $(check_uptime)")"
-    local uptime_sec="$(add_colors $1 $2 $3 $4 "UPTIME_SEC = $(check_uptime_sec)")"
-
-    read ip prefix < <(check_ip)
-    local ip="$(add_colors $1 $2 $3 $4 "IP = $ip")"
-    local mask="$(add_colors $1 $2 $3 $4 "MASK = $(check_mask $prefix)")"
-    local gateway="$(add_colors $1 $2 $3 $4 "GATEWAY = $(check_gateway)")"
-
-    local ram_total="$(add_colors $1 $2 $3 $4 "RAM_TOTAL = $(check_ram_total)")"
-    local ram_used="$(add_colors $1 $2 $3 $4 "RAM_USED = $(check_ram_used)")"
-    local ram_free="$(add_colors $1 $2 $3 $4 "RAM_FREE = $(check_ram_free)")"
-
-    local space_root="$(add_colors $1 $2 $3 $4 "SPACE_ROOT = $(check_space_root)")"
-    local space_root_used="$(add_colors $1 $2 $3 $4 "SPACE_ROOT_USED = $(check_space_root_used)")"
-    local space_root_free="$(add_colors $1 $2 $3 $4 "SPACE_ROOT_FREE = $(check_space_root_free)")"
-
-    echo -e "$hostname\n$timezone\n$user\n$os\n$date\n$uptime\n$uptime_sec\n$ip\n$mask\n$gateway\n$ram_total
-$ram_used\n$ram_free\n$space_root\n$space_root_used\n$space_root_free"
+    echo "$err" >&2
+    return 1
   fi
+  local hostname="$(add_colors $1 $2 $3 $4 "HOSTNAME=$(hostname)")"
+
+  local timezone="$(add_colors $1 $2 $3 $4 "TIMEZONE = $(check_timezone)")"
+
+  local user="$(add_colors $1 $2 $3 $4 "USER = $USER")"
+
+  local os="$(add_colors $1 $2 $3 $4 "OS = $(check_os)")"
+
+  local date="$(add_colors $1 $2 $3 $4 "DATE = $(date +"%d %B %Y %H:%M:%S")")"
+
+  local uptime="$(add_colors $1 $2 $3 $4 "UPTIME = $(check_uptime)")"
+  local uptime_sec="$(add_colors $1 $2 $3 $4 "UPTIME_SEC = $(check_uptime_sec)")"
+
+  read ip prefix < <(check_ip)
+  local ip="$(add_colors $1 $2 $3 $4 "IP = $ip")"
+  local mask="$(add_colors $1 $2 $3 $4 "MASK = $(check_mask $prefix)")"
+  local gateway="$(add_colors $1 $2 $3 $4 "GATEWAY = $(check_gateway)")"
+
+  local ram_total="$(add_colors $1 $2 $3 $4 "RAM_TOTAL = $(check_ram_total)")"
+  local ram_used="$(add_colors $1 $2 $3 $4 "RAM_USED = $(check_ram_used)")"
+  local ram_free="$(add_colors $1 $2 $3 $4 "RAM_FREE = $(check_ram_free)")"
+
+  local space_root="$(add_colors $1 $2 $3 $4 "SPACE_ROOT = $(check_space_root)")"
+  local space_root_used="$(add_colors $1 $2 $3 $4 "SPACE_ROOT_USED = $(check_space_root_used)")"
+  local space_root_free="$(add_colors $1 $2 $3 $4 "SPACE_ROOT_FREE = $(check_space_root_free)")"
+
+  echo -e "$hostname\n$timezone\n$user\n$os\n$date\n$uptime\n$uptime_sec\n$ip\n$mask\n$gateway\n$ram_total
+$ram_used\n$ram_free\n$space_root\n$space_root_used\n$space_root_free"
 }
 
 check_input() {

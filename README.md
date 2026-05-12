@@ -27,16 +27,6 @@ Bash scripts for system monitoring. Each version adds new functionality — from
 | 04 | Configuration file script.conf |
 | 05 | Data saving with timestamp |
 
-### 🚀 Quick Start
-
-```bash
-cd src/02
-bash main.sh
-
-# Output with colors
-cd src/03
-bash main.sh
-```
 
 ---
 
@@ -63,16 +53,6 @@ Bash-скрипты для мониторинга системы. Каждая �
 | 04 | Конфигурационный файл script.conf |
 | 05 | Сохранение данных с timestamp |
 
-### 🚀 Быстрый старт
-
-```bash
-cd src/02
-bash main.sh
-
-# Вывод с цветами
-cd src/03
-bash main.sh
-```
 
 ---
 

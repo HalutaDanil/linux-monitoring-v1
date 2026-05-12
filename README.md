@@ -19,11 +19,24 @@ Bash scripts for system monitoring. Each version adds new functionality — from
 
 ### ✨ Features
 
-| Version | Features |\n|---------|----------|\n| 01 | Basic output: hostname, timezone, user, OS, date, uptime |\n| 02 | Modular architecture: os.sh, timezone.sh, memory.sh, network.sh, uptime.sh |\n| 03 | Color formatting |\n| 04 | Configuration file script.conf |\n| 05 | Data saving with timestamp |
+| Version | Features |
+|---------|----------|
+| 01 | Basic output: hostname, timezone, user, OS, date, uptime |
+| 02 | Modular architecture: os.sh, timezone.sh, memory.sh, network.sh, uptime.sh |
+| 03 | Color formatting |
+| 04 | Configuration file script.conf |
+| 05 | Data saving with timestamp |
 
 ### 🚀 Quick Start
 
-```bash\ncd src/02\nbash main.sh\n\n# Output with colors\ncd src/03\nbash main.sh\n```
+```bash
+cd src/02
+bash main.sh
+
+# Output with colors
+cd src/03
+bash main.sh
+```
 
 ---
 
@@ -42,11 +55,24 @@ Bash-скрипты для мониторинга системы. Каждая �
 
 ### ✨ Возможности
 
-| Версия | Возможности |\n|--------|-------------|\n| 01 | Базовый вывод: hostname, timezone, user, OS, date, uptime |\n| 02 | Модульная архитектура: os.sh, timezone.sh, memory.sh, network.sh, uptime.sh |\n| 03 | Цветное форматирование |\n| 04 | Конфигурационный файл script.conf |\n| 05 | Сохранение данных с timestamp |
+| Версия | Возможности |
+|--------|-------------|
+| 01 | Базовый вывод: hostname, timezone, user, OS, date, uptime |
+| 02 | Модульная архитектура: os.sh, timezone.sh, memory.sh, network.sh, uptime.sh |
+| 03 | Цветное форматирование |
+| 04 | Конфигурационный файл script.conf |
+| 05 | Сохранение данных с timestamp |
 
 ### 🚀 Быстрый старт
 
-```bash\ncd src/02\nbash main.sh\n\n# Вывод с цветами\ncd src/03\nbash main.sh\n```
+```bash
+cd src/02
+bash main.sh
+
+# Вывод с цветами
+cd src/03
+bash main.sh
+```
 
 ---
 

@@ -11,22 +11,26 @@
 <a name="english"></a>
 ## 🇬🇧 English
 
-Bash scripts for system monitoring. Each version adds new functionality — from basic parameter output to color formatting and configuration files.
+A step-by-step evolution of bash scripting skills through building a system information tool. Each version adds new concepts — from a simple script to a modular, configurable, and colorized monitoring utility.
 
-### 🛠️ Tech Stack
+### What was done
+
+| Version | What & Why |
+|---------|-----------|
+| 01 | Basic script outputting hostname, timezone, user, OS, date, uptime, IP, mask, gateway, RAM, and disk usage. Learned how to extract system info with standard utilities. |
+| 02 | Split the script into modules (`os.sh`, `timezone.sh`, `memory.sh`, `network.sh`, `uptime.sh`, `assembl_output.sh`). Practiced decomposition and sourcing in bash. |
+| 03 | Added color formatting via ANSI escape codes. Made the output readable and visually structured. |
+| 04 | Introduced a `script.conf` configuration file for customizing colors without editing the script. Learned config-driven behavior. |
+| 05 | Added the ability to save output to a timestamped file (`DD_MM_YY_HH_MM_SS.status`). Useful for logging and audits. |
+
+### Key takeaways
+- Bash scripts can be **modular and maintainable** when decomposed properly.
+- **Configuration files** make tools flexible without code changes.
+- Colorized terminal output significantly improves **readability** of system data.
+
+### Tech Stack
 
 ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnu-bash&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
-
-### ✨ Features
-
-| Version | Features |
-|---------|----------|
-| 01 | Basic output: hostname, timezone, user, OS, date, uptime |
-| 02 | Modular architecture: os.sh, timezone.sh, memory.sh, network.sh, uptime.sh |
-| 03 | Color formatting |
-| 04 | Configuration file script.conf |
-| 05 | Data saving with timestamp |
-
 
 ---
 
@@ -37,22 +41,26 @@ Bash scripts for system monitoring. Each version adds new functionality — from
 <a name="русский"></a>
 ## 🇷🇺 Русский
 
-Bash-скрипты для мониторинга системы. Каждая версия добавляет новый функционал — от простого вывода параметров до цветного форматирования и конфигурационных файлов.
+Постепенное развитие навыков bash-скриптинга через создание утилиты для сбора системной информации. Каждая версия добавляет новые концепции — от простого скрипта до модульной, настраиваемой и цветной утилиты мониторинга.
 
-### 🛠️ Стек технологий
+### Что было сделано
+
+| Версия | Что и зачем |
+|--------|-------------|
+| 01 | Базовый скрипт, выводящий hostname, timezone, пользователя, ОС, дату, uptime, IP, маску, шлюз, RAM и диск. Научился доставать системную информацию стандартными утилитами. |
+| 02 | Разделение скрипта на модули (`os.sh`, `timezone.sh`, `memory.sh`, `network.sh`, `uptime.sh`, `assembl_output.sh`). Практика декомпозиции и `source` в bash. |
+| 03 | Добавлено цветное форматирование через ANSI escape-коды. Вывод стал читаемым и визуально структурированным. |
+| 04 | Введён конфигурационный файл `script.conf` для кастомизации цветов без правки скрипта. Изучено конфиг-управляемое поведение. |
+| 05 | Добавлено сохранение вывода в файл с timestamp (`DD_MM_YY_HH_MM_SS.status`). Полезно для логирования и аудита. |
+
+### Ключевые выводы
+- Bash-скрипты могут быть **модульными и поддерживаемыми** при правильной декомпозиции.
+- **Конфигурационные файлы** делают инструменты гибкими без изменения кода.
+- Цветной вывод в терминале существенно улучшает **читаемость** системных данных.
+
+### Стек технологий
 
 ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnu-bash&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
-
-### ✨ Возможности
-
-| Версия | Возможности |
-|--------|-------------|
-| 01 | Базовый вывод: hostname, timezone, user, OS, date, uptime |
-| 02 | Модульная архитектура: os.sh, timezone.sh, memory.sh, network.sh, uptime.sh |
-| 03 | Цветное форматирование |
-| 04 | Конфигурационный файл script.conf |
-| 05 | Сохранение данных с timestamp |
-
 
 ---
 
